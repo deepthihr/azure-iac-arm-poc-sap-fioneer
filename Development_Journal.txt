@@ -1,0 +1,35 @@
+Development Journal - Azure IaC PoC
+
+Date: 2025-05-22
+
+Objective:
+- Develop a Proof of Concept for Azure Infrastructure as Code using ARM templates.
+- Separate ARM templates for Virtual Network, Storage Account, and Virtual Machine.
+- Use a single parameters file for easy customization.
+- Follow security best practices, such as secure passwords, no public blob access.
+
+References:
+1. Microsoft ARM Template Schema and documentation:
+   https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+
+2. ARM template examples for VNet:
+   https://learn.microsoft.com/en-us/azure/virtual-network/quick-create-template
+
+3. ARM template examples for Storage Account:
+   https://learn.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts
+
+4. ARM template examples for Virtual Machine:
+   https://learn.microsoft.com/en-us/azure/templates/microsoft.compute/virtualmachines
+
+5. Azure best practices for ARM Templates:
+   https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/best-practices
+
+6. Security considerations:
+   - Use securestring for passwords.
+   - Disable public blob access on storage account.
+   - Use role-based access control (RBAC) in production.
+
+Next steps:
+- Add modules for more resources.
+- Add validation and outputs.
+- Implement CI/CD integration.

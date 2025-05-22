@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmName": {
+      "value": "myVM"
+    },
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "adminPassword": {
+      "value": "YourP@ssword123!"
+    },
+    "vmSize": {
+      "value": "Standard_B1s"
+    },
+    "vnetName": {
+      "value": "myVnet"
+    },
+    "vnetAddressPrefix": {
+      "value": "10.0.0.0/16"
+    },
+    "subnetName": {
+      "value": "default"
+    },
+    "subnetPrefix": {
+      "value": "10.0.0.0/24"
+    },
+    "storageAccountName": {
+      "value": "mystorageacct123"
+    },
+    "location": {
+      "value": "eastus"
+    }
+  }
+}
