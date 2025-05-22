@@ -1,0 +1,52 @@
+Development Journal - Azure IaC ARM PoC
+---------------------------------------
+
+Purpose:
+--------
+To create a Proof of Concept (PoC) for deploying Azure infrastructure using Infrastructure as Code (IaC)
+with ARM templates and source control (GitHub). The solution demonstrates use of the "Deploy to Azure" button
+for rapid, standardized deployment into the active Azure tenant.
+
+Development Timeline:
+---------------------
+- 2025-05-22: Initialized GitHub repo and created ARM template for Storage Account.
+- 2025-05-22: Validated template using VS Code with ARM Tools extension.
+- 2025-05-22: Added README with Deploy to Azure button.
+- 2025-05-22: Created Development_Journal.txt to track references and decisions.
+
+References Used:
+----------------
+1. Microsoft Docs - ARM Templates:
+   https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview
+
+2. Azure Quickstart Templates (GitHub):
+   https://github.com/Azure/azure-quickstart-templates
+
+3. "Deploy to Azure" Button Documentation:
+   https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-azure-button
+
+4. ARM Schema Reference:
+   https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#
+
+5. Azure Storage Account Resource Definition:
+   https://learn.microsoft.com/en-us/azure/templates/microsoft.storage/storageaccounts
+
+Security and Compliance Enhancements:
+-------------------------------------
+- HTTPS-only enforced via 'supportsHttpsTrafficOnly'.
+- Public access to blob storage explicitly disabled.
+- Restricted deployments to approved Azure regions.
+- Tags included for environment, owner, application, and cost center tracking.
+- Default tag values can be overridden by user input.
+
+Lessons Learned:
+----------------
+- ARM templates are schema-strict; all parameters must match exactly.
+- The Deploy to Azure button must link to a raw, URL-encoded GitHub URL.
+- GitHub repo must be public for Azure to access the template.
+
+Next Steps:
+-----------
+- Add more reusable modules (e.g., VNet, App Service).
+- Set up CI/CD with GitHub Actions.
+- Implement parameter files per environment (dev, test, prod).
